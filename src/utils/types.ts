@@ -7,7 +7,7 @@ export type CartItemWithProduct = Prisma.CartItemGetPayload<{
 export type actionFunction = (
   prevState: any,
   formData: FormData
-) => Promise<{ message: string } | void>;
+) => Promise<{ message: string } | undefined>;
 
 export type CartItem = {
   productId: string;

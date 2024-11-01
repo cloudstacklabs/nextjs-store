@@ -9,6 +9,7 @@ const initialState = {
   message: "",
 };
 
+
 function FormContainer({
   action,
   children,
@@ -18,9 +19,12 @@ function FormContainer({
 }) {
   const [state, formAction] = useFormState(action, initialState);
   const { toast } = useToast();
-  
+
+
   useEffect(() => {
+      //@ts-ignore
     if (state.message) {
+        //@ts-ignore
       toast({ description: state.message });
     }
   }, [state]);
